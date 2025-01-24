@@ -1,0 +1,11 @@
+.modal__footer {
+  width: auto;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 12px;
+  border-radius: 16px;
+}
