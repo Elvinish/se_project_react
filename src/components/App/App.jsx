@@ -15,7 +15,7 @@ function App() {
     city: "",
   });
   const [activeModal, setActiveModal] = useState("");
-  const [selecteCard, setSelectedCard] = useState({});
+  const [selectedCard, setSelectedCard] = useState({});
 
   const handleCardClick = (card) => {
     setActiveModal("preview");
@@ -93,7 +93,7 @@ function App() {
       </ModalWithForm>
       <ItemModal
         activeModal={activeModal}
-        card={selecteCard}
+        card={selectedCard}
         onClose={closeActiveModal}
       />
       <Footer />
