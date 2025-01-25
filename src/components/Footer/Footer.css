@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 85px;
+}
+
+.footer__text,
+.footer__year {
+  margin: 0;
+  font-size: 16px;
+  color: #000; /* Dark gray text */
+  font-family: "CabinetGrotesk";
+  font-weight: 500;
+}

@@ -8,3 +8,39 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.modal__radio-buttons {
+  display: grid;
+  border: none;
+  gap: 10px;
+  padding: 0;
+}
+
+.modal__legend {
+  padding: 24px 0 0;
+}
+
+.modal__input {
+  display: grid;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  margin-top: 8px;
+}
+
+.modal__label:nth-child(2) {
+  padding-top: 16px;
+}
+
+.modal__label_type_radio {
+  color: rgba(0, 0, 0, 0.5); /* Default grey color */
+}
+
+.modal__radio-input:checked + .modal__radio-text {
+  color: rgba(0, 0, 0, 1); /* Changes to black when selected */
+}
+
+.modal__radio-text {
+  margin: 10px;
+}
