@@ -1,0 +1,39 @@
+/* .clothes__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.clothes__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clothes__title {
+  font-size: 20px;
+  margin: 0;
+}
+} */
+
+.clothes__items {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+}
+
+.clothes-section__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clothes__add-new {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

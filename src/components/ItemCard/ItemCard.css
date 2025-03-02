@@ -13,4 +13,8 @@
 
 .card__image {
   width: 100%;
+  width: 328px;
+  height: 328px;
+  object-fit: cover;
+  border-radius: 12px;
 }

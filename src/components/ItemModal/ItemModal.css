@@ -1,11 +1,35 @@
-.modal__footer {
-  width: auto;
-  background-color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  gap: 12px;
+.modal__delete-button {
+  background: none;
+  border: none;
+  color: #ff4d00;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  grid-area: button;
+}
+
+.modal__delete-button:hover {
+  color: darkred;
+  text-decoration: none;
+}
+
+.modal__content {
   border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal__footer {
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas:
+    "title button"
+    "description description";
+  /* grid-template-columns: minmax(auto, 375px) auto; */
+  /* align-items: center; */
+  /* gap: 18px; */
+  margin: 20px 32px 32px;
+  gap: 12px;
 }

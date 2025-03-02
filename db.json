@@ -1,54 +1,6 @@
 {
   "items": [
     {
-      "_id": 0,
-      "name": "Beanie",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Beanie.png?etag=bc10497cc80fa557f036e94f9999f7b2"
-    },
-    {
-      "_id": 1,
-      "name": "Boot",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Boot.png?etag=0953a2ea59f1c6ebc832fabacdc9c70e"
-    },
-    {
-      "_id": 2,
-      "name": "Cap",
-      "weather": "hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png?etag=f3dad389b22909cafa73cff9f9a3d591"
-    },
-    {
-      "_id": 3,
-      "name": "Coat",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4"
-    },
-    {
-      "_id": 4,
-      "name": "Dress",
-      "weather": "hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Dress.png?etag=1f9cd32a311ab139cab43494883720bf"
-    },
-    {
-      "_id": 5,
-      "name": "Hoodie",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Hoodie.png?etag=5f52451d0958ccb1016c78a45603a4e8"
-    },
-    {
-      "_id": 6,
-      "name": "Jacket",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jacket.png?etag=f4bb188deaa25ac84ce2338be2d404ad"
-    },
-    {
-      "_id": 7,
-      "name": "Jeans",
-      "weather": "warm",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jeans.png?etag=58345e8bef1ce5f95ac882e71d309e6c"
-    },
-    {
       "_id": 8,
       "name": "Loafers",
       "weather": "warm",
@@ -101,6 +53,54 @@
       "name": "T-Shirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
+    },
+    {
+      "name": "eded",
+      "imageUrl": "https://images.unsplash.com/photo-1642856761437-5b5efcb36d81?q=80&w=1991&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "",
+      "_id": 18
+    },
+    {
+      "name": "Elvin Akhmedov",
+      "imageUrl": "https://pbs.twimg.com/media/Dyj_7w9V4AAOuZy.jpg",
+      "weather": "warm",
+      "_id": 19
+    },
+    {
+      "name": "frfrf",
+      "imageUrl": "https://images.unsplash.com/photo-1704799960305-eb9bc3fb0c63?q=80&w=3386&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "cold",
+      "_id": 22
+    },
+    {
+      "name": "Elvin",
+      "imageUrl": "https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?q=80&w=3284&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "cold",
+      "_id": 23
+    },
+    {
+      "name": "dwdqwfw",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1673276834846-533ab46976ad?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "cold",
+      "_id": 24
+    },
+    {
+      "name": "Elvin Akhmedov",
+      "imageUrl": "https://images.unsplash.com/photo-1516648064-ee10acfa64db?q=80&w=3526&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "cold",
+      "_id": 25
+    },
+    {
+      "name": "eded",
+      "imageUrl": "https://media.istockphoto.com/id/649597850/photo/walking-the-mountains.jpg?s=2048x2048&w=is&k=20&c=PqiqO0prCQdQ3WDR-6Qla8WAM3tp4pefdwvkyu6RhkQ=",
+      "weather": "cold",
+      "_id": 28
+    },
+    {
+      "name": "eded",
+      "imageUrl": "https://images.unsplash.com/photo-1516648064-ee10acfa64db?q=80&w=3526&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "cold",
+      "_id": 29
     }
   ]
 }
