@@ -13,7 +13,7 @@ import CurrentTemperatureUnitContext from "../contexts/CurrentTemperatureUnitCon
 import AddItemModal from "../AddItemModal/AddItemModal";
 import DeleteConfirmationModal from "../DeleteConfirmationModal/DeleteConfirmationModal";
 
-import { getItems, postItem, deleteItem } from "../src/utils/api";
+import { getItems, postItem, deleteItem } from "../../utils/api";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
