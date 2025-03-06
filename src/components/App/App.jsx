@@ -30,6 +30,7 @@ function App() {
   const [isWeatherDataLoading, setIsWeatherDataLoading] = useState(true);
   const [isDeleteModalOpen, setisDeleteModalOpen] = useState(false);
   const [itemToDelete, setItemToDelete] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleToggleSwitchChange = () => {
     setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
@@ -41,42 +42,38 @@ function App() {
   };
 
   const handleAddClick = () => {
-    setActiveModal("add-clothes");
+    setActiveModal("add-garment");
   };
 
   const closeActiveModal = () => {
-    setActiveModal("");
+    setActiveModal(""); // ✅ Ensure all modals are closed
+    setisDeleteModalOpen(false); // ✅ Close delete confirmation modal too
+    setItemToDelete(null); // ✅ Reset itemToDelete state
   };
 
-  const handleOpenDeleteModal = (item) => {
-    console.log("Opening delete modal for item:", item);
-    setItemToDelete(item._id); // Save the item's ID
-    // Also close the preview modal if needed
-    setActiveModal("");
-    setisDeleteModalOpen(true);
-  };
-
-  const handleDeleteItem = (itemId) => {
-    console.log("Attempting to delete item with ID:", itemId);
-    return deleteItem(itemId)
-      .then(() => {
-        setClothingItems((prevItems) =>
-          prevItems.filter((item) => item._id !== itemId)
-        );
-      })
-      .catch((err) => console.error("Error deleting item:", err));
-  };
+  // const handleDeleteItem = (itemId) => {
+  //   console.log("Attempting to delete item with ID:", itemId);
+  //   return deleteItem(itemId)
+  //     .then(() => {
+  //       setClothingItems((prevItems) =>
+  //         prevItems.filter((item) => item._id !== itemId)
+  //       );
+  //     })
+  //     .catch((err) => console.error("Error deleting item:", err));
+  // };
 
   const handleConfirmDelete = () => {
     console.log("Confirm delete clicked! itemToDelete:", itemToDelete);
-    if (itemToDelete === null) return;
+    if (!itemToDelete) return; // Exit if there's no item to delete
 
-    handleDeleteItem(itemToDelete).then(() => {
-      // After deletion, close both modals and reset the delete state
-      setActiveModal("");
-      setisDeleteModalOpen(false);
-      setItemToDelete(null);
-    });
+    deleteItem(itemToDelete) // Directly call deleteItem
+      .then(() => {
+        setClothingItems((prevItems) =>
+          prevItems.filter((item) => item._id !== itemToDelete)
+        );
+        closeActiveModal();
+      })
+      .catch((err) => console.error("Error deleting item:", err));
   };
 
   const handleAddItemModalSubmit = ({ name, imageUrl, weather }) => {
@@ -85,6 +82,8 @@ function App() {
       return;
     }
 
+    setIsLoading(true);
+
     postItem({ name, imageUrl, weather }) // Send to backend
       .then((newItem) => {
         setClothingItems((prevItems) =>
@@ -92,7 +91,10 @@ function App() {
         );
         closeActiveModal();
       })
-      .catch((err) => console.error("Error adding item:", err));
+      .catch((err) => console.error("Error adding item:", err))
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -118,6 +120,22 @@ function App() {
       .catch(console.error);
   }, []);
 
+  // useEffect(() => {
+  //   if (!activeModal) return; // Only add listener if a modal is active
+
+  //   const handleEscClose = (e) => {
+  //     if (e.key === "Escape") {
+  //       closeActiveModal();
+  //     }
+  //   };
+
+  //   document.addEventListener("keydown", handleEscClose);
+
+  //   return () => {
+  //     document.removeEventListener("keydown", handleEscClose);
+  //   };
+  // }, [activeModal]);
+
   return (
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}
@@ -137,7 +155,6 @@ function App() {
                     weatherData={weatherData}
                     onCardClick={handleCardClick}
                     clothingItems={clothingItems}
-                    onDeleteItem={handleDeleteItem}
                   />
                 )
               }
@@ -156,24 +173,24 @@ function App() {
           </Routes>
         </div>
         <AddItemModal
-          isOpen={activeModal === "add-clothes"}
+          isOpen={activeModal === "add-garment"}
           onClose={closeActiveModal}
           onAddItemModalSubmit={handleAddItemModalSubmit}
+          isLoading={isLoading}
         />
 
         <ItemModal
-          activeModal={activeModal}
+          isOpen={activeModal === "preview"}
           card={selectedCard}
           onClose={closeActiveModal}
-          onDelete={handleOpenDeleteModal}
+          onDelete={() => {
+            setItemToDelete(selectedCard._id); // ✅ Set the item to delete
+            setisDeleteModalOpen(true); // ✅ Open delete confirmation modal
+          }}
         />
         <DeleteConfirmationModal
           isOpen={isDeleteModalOpen}
-          onClose={() => {
-            console.log("Cancel clicked");
-            setisDeleteModalOpen(false);
-            setItemToDelete(null);
-          }}
+          onClose={closeActiveModal}
           onConfirm={handleConfirmDelete}
         />
 

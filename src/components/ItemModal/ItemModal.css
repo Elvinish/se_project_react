@@ -33,3 +33,44 @@
   margin: 20px 32px 32px;
   gap: 12px;
 }
+
+.modal__caption {
+  font-family: "CabinetGrotesk";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: title;
+}
+
+.modal__weather {
+  font-family: "CabinetGrotesk";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #666;
+  margin: 0;
+  grid-area: description;
+}
+
+.modal__image {
+  width: 100%;
+  /* border-radius: 16px; Round top corners */
+}
+
+/* .modal__close {
+  background: url("../../assets/close_modal.svg") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+} */
+
+.modal__content_type_image {
+  padding: 0; /* Remove extra padding for an image modal */
+  height: auto;
+}

@@ -11,11 +11,9 @@ function ClothesSection({ onCardClick, clothingItems, weatherData, onAddNew }) {
         </button>
       </div>
       <ul className="clothes-section__items">
-        {clothingItems
-          .filter((item) => item.weather === weatherData.type)
-          .map((item) => (
-            <ItemCard key={item._id} item={item} onCardClick={onCardClick} />
-          ))}
+        {clothingItems.map((item) => (
+          <ItemCard key={item._id} item={item} onCardClick={onCardClick} />
+        ))}
       </ul>
     </div>
   );
