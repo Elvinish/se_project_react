@@ -55,18 +55,6 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "name": "eded",
-      "imageUrl": "https://images.unsplash.com/photo-1642856761437-5b5efcb36d81?q=80&w=1991&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "weather": "",
-      "_id": 18
-    },
-    {
-      "name": "Elvin Akhmedov",
-      "imageUrl": "https://pbs.twimg.com/media/Dyj_7w9V4AAOuZy.jpg",
-      "weather": "warm",
-      "_id": 19
-    },
-    {
       "name": "frfrf",
       "imageUrl": "https://images.unsplash.com/photo-1704799960305-eb9bc3fb0c63?q=80&w=3386&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "weather": "cold",
@@ -124,12 +112,6 @@
       "name": "eded",
       "imageUrl": "https://www.duckworthco.com/cdn/shop/files/duckworth-merino-wool-clothing-usa-made-clothing-merino-wool-knit-cable-hat-shale.jpg?v=1729004348&width=1500",
       "weather": "cold",
-      "_id": 35
-    },
-    {
-      "name": "eded",
-      "imageUrl": "https://www.duckworthco.com/cdn/shop/files/duckworth-merino-wool-clothing-usa-made-clothing-merino-wool-knit-cable-hat-shale.jpg?v=1729004348&width=1500",
-      "weather": "cold",
       "_id": 38
     },
     {
@@ -143,6 +125,12 @@
       "imageUrl": "https://www.duckworthco.com/cdn/shop/files/duckworth-merino-wool-clothing-usa-made-clothing-merino-wool-knit-cable-hat-shale.jpg?v=1729004348&width=1500",
       "weather": "cold",
       "_id": 40
+    },
+    {
+      "name": "eded",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1671658222199-7061b54d29dd?q=80&w=3686&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "weather": "cold",
+      "_id": 41
     }
   ]
 }

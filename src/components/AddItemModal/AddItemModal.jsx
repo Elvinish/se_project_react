@@ -17,15 +17,7 @@ export default function AddItemModal({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Ensure submission is treated as a promise
-    Promise.resolve(onAddItemModalSubmit(values))
-      .then(() => {
-        resetForm(); // ✅ Reset only after successful submission
-      })
-      .catch((err) => {
-        console.error("Error submitting form:", err);
-      });
+    onAddItemModalSubmit(values);
   };
 
   useEffect(() => {
@@ -43,14 +35,14 @@ export default function AddItemModal({
       onClose={onClose}
       onSubmit={handleSubmit}
     >
-      <label htmlFor="name" className="modal__label">
+      <label className="modal__label">
         Name{" "}
         <input
           type="text"
           className="modal__input"
           placeholder="Name"
           name="name"
-          id="clothing-name"
+          id="name"
           required
           minLength="1"
           maxLength="30"
@@ -58,13 +50,13 @@ export default function AddItemModal({
           value={values.name || ""}
         />
       </label>
-      <label htmlFor="imageUrl" className="modal__label">
+      <label className="modal__label">
         Image{" "}
         <input
           type="url"
           name="imageUrl"
           className="modal__input"
-          id="clothing-link"
+          id="imageUrl"
           placeholder="Image URL"
           required
           onChange={handleChange}

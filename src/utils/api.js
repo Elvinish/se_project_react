@@ -28,4 +28,4 @@ function deleteItem(itemId) {
   });
 }
 
-export { getItems, postItem, deleteItem };
+export { getItems, postItem, deleteItem, checkResponse, request };
