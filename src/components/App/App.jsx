@@ -146,7 +146,10 @@ function App() {
       .then((res) => {
         localStorage.setItem("jwt", res.token);
         setIsLoggedIn(true);
-        setCurrentUser(res.data); // or whatever your backend returns
+        return checkToken(res.token); // ✅ fetch latest user data with avatar
+      })
+      .then((userData) => {
+        setCurrentUser(userData); // ✅ update context with fresh data
         closeRegisterModal();
       })
       .catch((err) => console.error("Registration/Login error:", err))
