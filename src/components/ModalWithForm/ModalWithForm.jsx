@@ -9,6 +9,7 @@ function ModalWithForm({
   buttonText,
   onSubmit,
   children,
+  footer,
 }) {
   return (
     <Modal name={name} isOpen={isOpen} onClose={onClose} closeButtonType="grey">
@@ -17,9 +18,15 @@ function ModalWithForm({
 
         <form onSubmit={onSubmit} className="modal__form">
           {children}
-          <button type="submit" className="modal__submit">
-            {buttonText}
-          </button>
+          <div className="modal__form-footer">
+            <button
+              type="submit"
+              className={`modal__submit modal__submit_type_${name}`}
+            >
+              {buttonText}
+            </button>
+            {footer}
+          </div>
         </form>
       </div>
     </Modal>

@@ -19,9 +19,14 @@
   opacity: 30%;
 }
 
+.modal__submit_type_login,
+.modal__submit_type_register {
+  width: 86px;
+}
+
 .modal__submit:hover {
   background-color: black;
-  opacity: 60%;
+  opacity: 100%;
 }
 
 .modal__title {
@@ -29,4 +34,27 @@
   font-size: 16px;
   line-height: 1.2;
   margin-top: 28px;
+}
+
+.modal__form-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal__switch {
+  color: #888;
+}
+
+.modal__switch-button {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0;
 }

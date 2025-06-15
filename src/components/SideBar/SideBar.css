@@ -1,19 +1,20 @@
-/* 
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
 
 .sidebar__avatar {
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 8px;
 }
 
 .sidebar__username {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
-} */
-
-.sidebar {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  text-align: center;
 }

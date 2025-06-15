@@ -1,0 +1,17 @@
+.modal__error-label {
+  color: #ff4d00;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.modal__input_type_error {
+  border-bottom: 2px solid #ff4d00;
+  color: #ff4d00;
+}
+
+.modal__input_type_error::placeholder {
+  color: #ff4d00;
+  opacity: 0.6;
+}
