@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+import { baseUrl } from "../utils/constants";
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
@@ -9,7 +9,7 @@ function request(url, options) {
 }
 
 function getItems() {
-  return request(`${baseUrl}/items`);
+  return request(`${l}/items`);
 }
 
 function postItem({ name, imageUrl, weather }, token) {

@@ -115,3 +115,8 @@ export const coordinates = {
 };
 
 export const APIkey = "d59860f11437b9ec2908a1281743d45b";
+
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwrElvin.twilightparadox.com"
+    : "http://localhost:3001";
