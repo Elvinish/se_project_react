@@ -9,7 +9,7 @@ function request(url, options) {
 }
 
 function getItems() {
-  return request(`${l}/items`);
+  return request(`${baseUrl}/items`);
 }
 
 function postItem({ name, imageUrl, weather }, token) {
