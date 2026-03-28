@@ -103,7 +103,6 @@ function App() {
   };
 
   const handleConfirmDelete = () => {
-    console.log("Confirm delete clicked! itemToDelete:", itemToDelete);
     if (!itemToDelete) return; // Exit if there's no item to delete
 
     deleteItem(itemToDelete, localStorage.getItem("jwt"))

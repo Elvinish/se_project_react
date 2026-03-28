@@ -12,6 +12,7 @@
     "deploy": "npm run build && scp -r ./dist/* elvinish64@34.10.231.171:/home/elvinish64/frontend"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.29.0"
